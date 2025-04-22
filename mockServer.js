@@ -19,10 +19,14 @@ io.on('connection', (socket) => {
         ...msg,
         id: Date.now() + 1,
         username: 'AI',
-        content: `Echo: ${msg.content}`,
+        content: `You have typed \"${msg.content}\", Next is an AI response.`,
       });
     }, 1000);
   });
+  socket.on('typing', () => {
+    socket.broadcast.emit('typing');
+  });
+  
 
   socket.on('disconnect', () => {
     console.log('User disconnected');

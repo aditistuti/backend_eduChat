@@ -11,6 +11,7 @@
   "description": "",
   "dependencies": {
     "dotenv": "^16.5.0",
+    "nodemon": "^3.1.9",
     "socket.io": "^4.8.1",
     "uuidv4": "^6.2.13"
   }
